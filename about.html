@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="content">
+
+                <h1 class="ml12">Hi . . !!!</h1>
+
+                <div class="image">
+                <div>
+                    <img src="./pics/aanchal.jpg" width="200px" class="img1">
+                    <p class="pclass1">AANCHAL PATYAL</p>
+                    <a href="https://www.linkedin.com/in/aanchal-patyal-500863193/" target="_blank">
+                        <img src="https://www.linkedin.com/favicon.ico" width="22px">
+                    </a>
+                </div>
+                <div>
+                    <img src="./pics/aman.jpg" width="200px" class="img2">
+                    <p class="pclass2">
+                        <span class="text-wrapper">
+                          <span class="letters">AMAN PATYAL</span>
+                        </span>
+                    </p>
+                    
+                    <a href="https://www.linkedin.com/in/aman-patyal-675758218/" target="_blank">
+                    <img src="https://www.linkedin.com/favicon.ico" width="22px">
+                </a>
+                </div>
+            </div>
+                <p id="about-about">This platform provides links for resources like blogs, articles, and videos for Data Enthusiasts.
+                    We used Firebase db , HTML canvas , <a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_blank" style="text-decoration: none;color:white;">tilt.js </a>, <a href="https://tobiasahlin.com" target="_blank" style="text-decoration: none;color:white;">moving-letters ( anime.js )</a> .</p>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="tilt.js"></script>
+    <script>
+        var textWrapper1 = document.querySelector('.pclass1');
+    textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.pclass1 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.pclass1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+
+  var textWrapper = document.querySelector('.pclass2 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.pclass2 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.pclass2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+ 
+    
+  var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter1'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter1',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter1',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });  
+
+
+    VanillaTilt.init(document.querySelector(".main"), {
+        reverse:true,
+    max: 3,
+    speed: 100,
+    glare:true,
+    'max-glare':0.5,
+    scale:1.03
+    });
+    VanillaTilt.init(document.querySelector(".img1"), {
+        reverse:true,
+    max: 15,
+    speed: 100,
+    glare:true,
+    'max-glare':0.5,
+    scale:1.03,
+    reset:false,
+    });
+
+    VanillaTilt.init(document.querySelector(".img2"), {
+        reverse:true,
+    max: 18,
+    speed: 100,
+    glare:true,
+    'max-glare':0.5,
+    scale:1.03,
+    reset:false,
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'myFont3';
+  src: url(Cookie-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#767771;
+    /* rgb(182, 182, 124); */
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.container .main{
+    background-image: linear-gradient(150deg
+    , #5a00ff 0%, #1fff62 100%, #ff1ff7 100%);
+    position: relative;
+    width: 80vw;
+    height: 600px;
+    margin: 30px;
+    opacity: .9;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    overflow: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    backdrop-filter: blur(2px);
+
+}
+.container .main:hover{
+  opacity: 1;
+}
+.image{
+    display: flex;
+    justify-content: space-between;
+}
+#about-about{
+  font-size: 2.5em;
+  margin-top: 26px;
+  font-family:myFont3;
+}
+
+.container .main .content{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.container .main .content h1{
+    position: absolute;
+    top: 40px;
+    right: 43%;
+    font-size: 2em;
+    pointer-events: none;
+    color: rgba(255,255,255,0.9);
+}
+.container .main .content p{
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+    
+}
+
+.pclass1 {
+    color: #402d2d;
+    padding: 10px 0;
+    font-weight: 200;
+    font-size: 1em;
+    /* letter-spacing: 0.5em; */
+    overflow: hidden;
+  }
+  
+.pclass1 .letter {
+    display: inline-block;
+    line-height: 2em;
+  }
+
+  .pclass2 {
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
+    padding: 10px 0;
+  }
+  
+  .pclass2 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .pclass2 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  
+  .ml12 {
+    font-weight: 200;
+    font-size: 4em;
+
+  }
+  
+  .ml12 .letter1 {
+    display: inline-block;
+    line-height: 2em;
+    font-size: 2em;
+  }
