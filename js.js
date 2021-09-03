@@ -1,10 +1,4 @@
-// window.onload = function(){
-//   document.getElementById("myImg").src='https://medium.com/favicon.ico';
-// };
 import {configData} from './firebase_config.js';
-// const configData=configData;
-// const d = new Date();
-// document.getElementById("demo").innerHTML = d.toDateString();
 
 var firebaseConfig = {
   apiKey: configData.apiKey,
@@ -24,9 +18,9 @@ const db = firebase.firestore();
 
 function display(){
   var arr=[]
-    // console.log('aman')
+    
     db.collection('users').orderBy('date','desc').get().then(querySnapshot=>{
-      // console.log(querySnapshot)
+    
         querySnapshot.forEach(function(a){
           var dict={id:a.id,link:a.data().link,desc:a.data().desc,dt:a.data().date,icon:a.data().icon};
           arr.push(dict);
@@ -35,21 +29,13 @@ function display(){
         arr.forEach(addList);
 });}
 
-// document.querySelector('.delete').addEventListener('click',()=>{
-//     console.log('deleted');
-// })
-
-
 
 display();
 
 
-
-
 function addList(e){
   var ul=document.getElementById('d-list');
-  
-  var t=firebase.firestore.Timestamp.fromDate(new Date());
+ 
   var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 //   var url=e['link']
 //   var a=url.split('/')
@@ -67,7 +53,7 @@ function addList(e){
 					</h3>
 
 					<div class="fitem i4">
-          ${new Date(t.toDate()).toLocaleDateString("en-US", options)}
+          ${new Date(e.dt*1000).toLocaleDateString("en-US", options)}
 					</div>
 				</div>
 			</a>
