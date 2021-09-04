@@ -14,7 +14,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color:white; */
     background-image:repeating-linear-gradient(-45deg, red, rgb(243, 243, 144) 2px, white 25px, blue 20px);
 }
 
