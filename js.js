@@ -17,44 +17,26 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 function display(){
-  var arr=[]
-<<<<<<< HEAD
-   
-    db.collection('users').orderBy('date','desc').get().then(querySnapshot=>{
-      
-=======
+  var arr=[]  
     
     db.collection('users').orderBy('date','desc').get().then(querySnapshot=>{
-    
->>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
+
         querySnapshot.forEach(function(a){
           var dict={id:a.id,link:a.data().link,desc:a.data().desc,dt:a.data().date,icon:a.data().icon};
           arr.push(dict);
       });
         
         arr.forEach(addList);
-});}
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
-
+});
+}
 display();
 
 
 function addList(e){
   var ul=document.getElementById('d-list');
-<<<<<<< HEAD
-  
 
 
-=======
- 
->>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
-  var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+	var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 //   var url=e['link']
 //   var a=url.split('/')
   //   a[0]+a[2]+'/favicon.ico'
@@ -190,29 +172,29 @@ class Particle{
 }
 
 		
-		function handleParticle(){
-			for(let i=0;i<particleArray.length;i++){
-				particleArray[i].update();
-				particleArray[i].draw();
-				
-				for(let j=1;j<particleArray.length;j++){
-					const dx=particleArray[i].x-particleArray[j].x;
-					const dy=particleArray[i].y-particleArray[j].y;
-			const distance=Math.sqrt(dx*dx+dy*dy)
-			if(distance<100){
-				ctx.beginPath();
-				ctx.strokeStyle=particleArray[i].color;
-				ctx.lineWidth=.6
-				ctx.moveTo(particleArray[i].x,particleArray[i].y)
-				ctx.lineTo(particleArray[j].x,particleArray[j].y)
-				ctx.stroke();	
-			}
-		}
-		if(particleArray[i].size<=0.4){
-			particleArray.splice(i,1);
-			i--;
+function handleParticle(){
+		for(let i=0;i<particleArray.length;i++){
+			particleArray[i].update();
+			particleArray[i].draw();
+			
+			for(let j=1;j<particleArray.length;j++){
+				const dx=particleArray[i].x-particleArray[j].x;
+				const dy=particleArray[i].y-particleArray[j].y;
+		const distance=Math.sqrt(dx*dx+dy*dy)
+		if(distance<100){
+			ctx.beginPath();
+			ctx.strokeStyle=particleArray[i].color;
+			ctx.lineWidth=.6
+			ctx.moveTo(particleArray[i].x,particleArray[i].y)
+			ctx.lineTo(particleArray[j].x,particleArray[j].y)
+			ctx.stroke();	
 		}
 	}
-}
+	if(particleArray[i].size<=0.4){
+		particleArray.splice(i,1);
+		i--;
+	}
+	}
+	}
 
 
