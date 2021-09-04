@@ -18,9 +18,15 @@ const db = firebase.firestore();
 
 function display(){
   var arr=[]
+<<<<<<< HEAD
    
     db.collection('users').orderBy('date','desc').get().then(querySnapshot=>{
       
+=======
+    
+    db.collection('users').orderBy('date','desc').get().then(querySnapshot=>{
+    
+>>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
         querySnapshot.forEach(function(a){
           var dict={id:a.id,link:a.data().link,desc:a.data().desc,dt:a.data().date,icon:a.data().icon};
           arr.push(dict);
@@ -29,20 +35,25 @@ function display(){
         arr.forEach(addList);
 });}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
 
 display();
 
 
-
-
 function addList(e){
   var ul=document.getElementById('d-list');
+<<<<<<< HEAD
   
 
 
+=======
+ 
+>>>>>>> 09c788e895d3b0bc50ae061dcb3b4137233459ca
   var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 //   var url=e['link']
 //   var a=url.split('/')
