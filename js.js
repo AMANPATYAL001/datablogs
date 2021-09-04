@@ -42,7 +42,7 @@ function addList(e){
   var ul=document.getElementById('d-list');
   
 
-  console.log(e.dt)
+
   var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 //   var url=e['link']
 //   var a=url.split('/')
