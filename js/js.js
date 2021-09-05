@@ -44,7 +44,7 @@ function addList(e){
   const da=`
   <a href="${e['link']}" class='main' target="_blank">
 				<div class="fcontainer">
-					<img  src=${'./res/'+e['icon']+'.ico'} class="fitem i1" width='30'>
+					<img  src=${'/res/'+e['icon']+'.ico'} class="fitem i1" width='30'>
           
 					
 
