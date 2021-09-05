@@ -1,8 +1,7 @@
 @font-face {
-  font-family: 'myFont3';
-  src: url(Cookie-Regular.ttf);
+  font-family: 'myFont';
+  src: url(../res/Cookie-Regular.ttf);
 }
-
 
 *{
     margin: 0;
@@ -56,7 +55,7 @@ body{
 #about-about{
   font-size: 2.5em;
   margin-top: 26px;
-  font-family:myFont3;
+  font-family:myFont;
 }
 
 .container .main .content{
@@ -85,7 +84,6 @@ body{
     padding: 10px 0;
     font-weight: 200;
     font-size: 1em;
-    /* letter-spacing: 0.5em; */
     overflow: hidden;
   }
   

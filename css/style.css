@@ -3,13 +3,14 @@
     padding: 0px;
 }
 @font-face {
-    font-family: 'myFont2';
-    src: url(RothenburgDecorative.ttf);
+    font-family: 'myFont';
+    src: url(../res/RothenburgDecorative.ttf);
   }
 .header{
-    font-family: myFont2;
+    font-family: myFont;
     font-size: 6em;
     color:red;
+    z-index: 20;
     flex-direction: row;
     align-self: center;
 }
