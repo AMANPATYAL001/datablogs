@@ -39,7 +39,7 @@ function addList(e){
 	var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 //   var url=e['link']
 //   var a=url.split('/')
-  //   a[0]+a[2]+'/favicon.ico'
+    //  console.log(a[0]+a[2]+'/favicon.ico')
 
   const da=`
   <a href="${e['link']}" class='main' target="_blank">
