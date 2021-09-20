@@ -61,10 +61,9 @@ body{
 }
 
 #counter{
-    /* border: 3px solid red; */
+    
     align-self:flex-start;
     justify-self: right;
-    /* z-index: 2; */
     font-size: 17px;
     margin-right: 20px;
     color: rgb(240, 237, 50);
