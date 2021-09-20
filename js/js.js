@@ -25,6 +25,13 @@ function display(){
           var dict={id:a.id,link:a.data().link,desc:a.data().desc,dt:a.data().date,icon:a.data().icon};
           arr.push(dict);
       });
+	  let counter=document.getElementById('counter');
+		
+		let loops=1
+		let intervalId=setInterval(function () {
+			counter.innerText=loops;
+			loops++ >= arr.length && (clearInterval(intervalId));
+		}, 250);
         
         arr.forEach(addList);
 });
@@ -139,7 +146,7 @@ function AnotherhandleParticle(){
 
 function Anotherfollow(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
-	hue+=5;
+	hue+=Math.floor(Math.random() *15);
 	AnotherhandleParticle();
 	requestAnimationFrame(Anotherfollow);
 	handleParticle();
@@ -160,7 +167,7 @@ class Particle{
 	update(){
 		this.x+=this.speedX;
 		this.y+=this.speedY;
-		if(this.size>0.2) this.size-=0.1
+		if(this.size>0.3) this.size-=0.1
 		
 	}
 	draw(){
@@ -190,7 +197,7 @@ function handleParticle(){
 			ctx.stroke();	
 		}
 	}
-	if(particleArray[i].size<=0.4){
+	if(particleArray[i].size<=0.3){
 		particleArray.splice(i,1);
 		i--;
 	}
