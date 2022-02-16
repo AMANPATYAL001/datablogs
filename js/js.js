@@ -60,7 +60,7 @@ function addList(e){
 					</h3>
 
 					<div class="fitem i4">
-          ${new Date(e.dt*1000).toLocaleDateString("en-US", options)}
+          ${new Date(e.dt).toLocaleDateString("en-US", options)}
 					</div>
 				</div>
 			</a>
