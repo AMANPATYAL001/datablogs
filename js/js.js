@@ -40,6 +40,7 @@ display();
 
 
 function addList(e){
+	var time=null
   var ul=document.getElementById('d-list');
 
 
@@ -48,6 +49,13 @@ function addList(e){
 //   var a=url.split('/')
     //  console.log(a[0]+a[2]+'/favicon.ico')
 
+	// earlier timestamp(unix) was 10 digit, and current timestamp(unix) is 13 digit.
+	if(e.dt.toString().length==10){
+		time=e.dt*1000;
+	}
+	else{
+		time=e.dt;
+	}
   const da=`
   <a href="${e['link']}" class='main' target="_blank">
 				<div class="fcontainer">
@@ -60,13 +68,14 @@ function addList(e){
 					</h3>
 
 					<div class="fitem i4">
-          ${new Date(e.dt).toLocaleDateString("en-US", options)}
+          ${new Date(time).toLocaleDateString("en-US", options)}
 					</div>
 				</div>
 			</a>
 
   
   `
+
   ul.insertAdjacentHTML('beforeend',da);
 }
 
